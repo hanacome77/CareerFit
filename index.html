@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal Job Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .search-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .search-example {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .search-container h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .search-container input, .search-container select {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .search-container button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .search-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <h1>Search Internal Jobs</h1>
+        <input type="text" placeholder="Keyword (for example: Engineer or HR ...)">
+        <select>
+            <option value="">Select Department</option>
+            <option value="IT">IT</option>
+            <option value="HR">HR</option>
+            <option value="Finance">Finance</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Sales">Sales</option>
+            <option value="Operations">Operations</option>
+            <option value="Customer Service">Customer Service</option>
+            <option value="Legal">Legal</option>
+            <option value="Research and Development">Research and Development</option>
+            <option value="Administration">Administration</option>
+        </select>
+        <select>
+            <option value="">Select Location</option>
+            <option value="Berlin">Berlin</option>
+            <option value="Munich">Munich</option>
+            <option value="Frankfurt">Frankfurt</option>
+            <option value="Hamburg">Hamburg</option>
+            <option value="Cologne">Cologne</option>
+            <option value="Stuttgart">Stuttgart</option>
+            <option value="Düsseldorf">Düsseldorf</option>
+            <option value="Leipzig">Leipzig</option>
+            <option value="Dortmund">Dortmund</option>
+            <option value="Essen">Essen</option>
+        </select>
+        <select>
+            <option value="">Select Job Type</option>
+            <option value="Full-time">Full-time</option>
+            <option value="Part-time">Part-time</option>
+            <option value="Internship">Internship</option>
+            <option value="Contract">Contract</option>
+            <option value="Temporary">Temporary</option>
+            <option value="Freelance">Freelance</option>
+            <option value="Consultant">Consultant</option>
+            <option value="Manager">Manager</option>
+            <option value="Director">Director</option>
+            <option value="Executive">Executive</option>
+            <option value="Assistant">Assistant</option>
+            <option value="Coordinator">Coordinator</option>
+            <option value="Analyst">Analyst</option>
+            <option value="Specialist">Specialist</option>
+            <option value="Technician">Technician</option>
+        </select>
+        </br>
+        <button id="search-link">Search</button>
+    </div>
+    </br>
+
+    <script>
+        // Example of dynamic query parameters based on user input
+        document.getElementById('search-link').addEventListener('click', function() {
+            const keyword = 'engineer'; // Replace with user input
+            const department = 'IT';    // Replace with user input
+            const location = 'Berlin';  // Replace with user input
+            const jobType = 'Full-time';// Replace with user input
+
+            // Construct URL with query parameters
+            const queryParams = `keyword=${encodeURIComponent(keyword)}&department=${encodeURIComponent(department)}&location=${encodeURIComponent(location)}&jobType=${encodeURIComponent(jobType)}`;
+        
+            // Redirect to results.html with the constructed query
+            window.location.href = `results.html?${queryParams}`;
+        });
+        document.querySelector('button').addEventListener('click', function () {
+            const keyword = document.querySelector('input[type="text"]').value;
+            const department = document.querySelector('select:nth-of-type(1)').value;
+            const location = document.querySelector('select:nth-of-type(2)').value;
+            const jobType = document.querySelector('select:nth-of-type(3)').value;
+    
+            // 構造請求 URL，並將查詢參數附加到 URL
+            const url = `results.html?keyword=${encodeURIComponent(keyword)}&department=${encodeURIComponent(department)}&location=${encodeURIComponent(location)}&jobType=${encodeURIComponent(jobType)}`;
+    
+            // 重定向到 results.html
+            window.location.href = url;
+        });
+    </script>
+</body>
+
+</html>

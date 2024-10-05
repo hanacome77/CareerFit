@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "csv-parser": "^3.0.0",
+    "express": "^4.21.0"
+  },
+  "name": "careerfit",
+  "version": "1.0.0",
+  "description": "This project is a simple internal job search system for employees to search and apply for internal job vacancies. The system includes a search page and a results page, and uses a CSV file as a temporary database for demo purposes.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

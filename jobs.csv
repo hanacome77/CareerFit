@@ -1,0 +1,51 @@
+title,department,location,job_type,description,apply_link
+Software Engineer,IT,Berlin,Full-time,Develop and maintain software applications,http://example.com/apply/1
+HR Manager,HR,Munich,Full-time,Manage HR activities and policies,http://example.com/apply/2
+Financial Analyst,Finance,Frankfurt,Full-time,Analyze financial data and trends,http://example.com/apply/3
+Marketing Specialist,Marketing,Hamburg,Full-time,Develop marketing strategies,http://example.com/apply/4
+Sales Representative,Sales,Cologne,Full-time,Drive sales and customer relationships,http://example.com/apply/5
+Operations Manager,Operations,Stuttgart,Full-time,Oversee daily operations,http://example.com/apply/6
+Customer Service Agent,Customer Service,Düsseldorf,Full-time,Assist customers with inquiries,http://example.com/apply/7
+Legal Advisor,Legal,Leipzig,Full-time,Provide legal advice and support,http://example.com/apply/8
+R&D Scientist,Research and Development,Dortmund,Full-time,Conduct research and development,http://example.com/apply/9
+Administrative Assistant,Administration,Essen,Full-time,Provide administrative support,http://example.com/apply/10
+Project Manager,IT,Berlin,Full-time,Manage software development projects,http://example.com/apply/11
+Recruiter,HR,Munich,Full-time,Recruit and onboard new employees,http://example.com/apply/12
+Accountant,Finance,Frankfurt,Full-time,Manage financial records and transactions,http://example.com/apply/13
+Digital Marketer,Marketing,Hamburg,Full-time,Execute digital marketing campaigns,http://example.com/apply/14
+Sales Manager,Sales,Cologne,Full-time,Lead sales team and strategy,http://example.com/apply/15
+Logistics Coordinator,Operations,Stuttgart,Full-time,Coordinate logistics and supply chain,http://example.com/apply/16
+Support Specialist,Customer Service,Düsseldorf,Full-time,Provide technical support,http://example.com/apply/17
+Corporate Lawyer,Legal,Leipzig,Full-time,Handle corporate legal matters,http://example.com/apply/18
+Lab Technician,Research and Development,Dortmund,Full-time,Perform lab experiments,http://example.com/apply/19
+Office Manager,Administration,Essen,Full-time,Manage office operations,http://example.com/apply/20
+Data Analyst,IT,Berlin,Full-time,Analyze and interpret data,http://example.com/apply/21
+HR Assistant,HR,Munich,Full-time,Assist with HR tasks,http://example.com/apply/22
+Financial Planner,Finance,Frankfurt,Full-time,Develop financial plans,http://example.com/apply/23
+Content Creator,Marketing,Hamburg,Full-time,Create marketing content,http://example.com/apply/24
+Account Executive,Sales,Cologne,Full-time,Manage client accounts,http://example.com/apply/25
+Production Manager,Operations,Stuttgart,Full-time,Oversee production processes,http://example.com/apply/26
+Customer Support Manager,Customer Service,Düsseldorf,Full-time,Manage customer support team,http://example.com/apply/27
+Compliance Officer,Legal,Leipzig,Full-time,Ensure regulatory compliance,http://example.com/apply/28
+Research Assistant,Research and Development,Dortmund,Full-time,Assist in research projects,http://example.com/apply/29
+Executive Assistant,Administration,Essen,Full-time,Assist executives with tasks,http://example.com/apply/30
+Network Engineer,IT,Berlin,Full-time,Maintain network infrastructure,http://example.com/apply/31
+HR Coordinator,HR,Munich,Full-time,Coordinate HR activities,http://example.com/apply/32
+Budget Analyst,Finance,Frankfurt,Full-time,Analyze budget reports,http://example.com/apply/33
+SEO Specialist,Marketing,Hamburg,Full-time,Optimize website for search engines,http://example.com/apply/34
+Business Development Manager,Sales,Cologne,Full-time,Develop business opportunities,http://example.com/apply/35
+Warehouse Manager,Operations,Stuttgart,Full-time,Manage warehouse operations,http://example.com/apply/36
+Technical Support Engineer,Customer Service,Düsseldorf,Full-time,Provide technical support,http://example.com/apply/37
+Paralegal,Legal,Leipzig,Full-time,Assist lawyers with legal work,http://example.com/apply/38
+Biochemist,Research and Development,Dortmund,Full-time,Conduct biochemical research,http://example.com/apply/39
+Receptionist,Administration,Essen,Full-time,Manage front desk,http://example.com/apply/40
+System Administrator,IT,Berlin,Full-time,Manage IT systems,http://example.com/apply/41
+HR Generalist,HR,Munich,Full-time,Handle various HR tasks,http://example.com/apply/42
+Investment Analyst,Finance,Frankfurt,Full-time,Analyze investment opportunities,http://example.com/apply/43
+Brand Manager,Marketing,Hamburg,Full-time,Manage brand strategy,http://example.com/apply/44
+Sales Consultant,Sales,Cologne,Full-time,Consult with clients on sales,http://example.com/apply/45
+Supply Chain Manager,Operations,Stuttgart,Full-time,Manage supply chain,http://example.com/apply/46
+Customer Success Manager,Customer Service,Düsseldorf,Full-time,Ensure customer satisfaction,http://example.com/apply/47
+Corporate Counsel,Legal,Leipzig,Full-time,Provide corporate legal advice,http://example.com/apply/48
+Research Scientist,Research and Development,Dortmund,Full-time,Conduct scientific research,http://example.com/apply/49
+Office Assistant,Administration,Essen,Full-time,Assist with office tasks,http://example.com/apply/50

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .job-listing {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .job-listing h2 {
+            margin: 0;
+            color: #333;
+        }
+        .job-listing p {
+            margin: 5px 0;
+        }
+        .job-listing a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .job-listing a:hover {
+            text-decoration: underline;
+        }
+        button {
+            float: right;
+            padding: 7px 15px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        a {
+            color: #fff;
+            font-size: 17px;
+            text-decoration: none;
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <nav><button><a href="index.html">Back to Search</a></button></nav>
+    </header>
+    <h1>Job Search Results</h1>
+    <div id="results"></div>
+
+    <script>
+        function getQueryParams() {
+            const params = {};
+            const queryString = window.location.search.substring(1);
+            const queries = queryString.split('&');
+
+            queries.forEach(query => {
+                const [key, value] = query.split('=');
+                params[decodeURIComponent(key)] = decodeURIComponent(value);
+            });
+
+            return params;
+        }
+
+        async function fetchJobs() {
+            const response = await fetch('http://localhost:3001/api/jobs');
+    const jobs = await response.json();
+    
+    // Step 1: 打印获取的工作数据
+    console.log("All Jobs Data:", jobs);
+    
+    const resultsDiv = document.getElementById('results');
+    const queryParams = getQueryParams();
+
+    // Step 2: 打印提取的查询参数
+    console.log("Query Parameters:", queryParams);
+
+            const filteredJobs = jobs.filter(job => {
+                const filteredJobs = jobs.filter(job => {
+    return (!queryParams.keyword || job.title.toLowerCase().includes(queryParams.keyword.toLowerCase())) &&
+        (!queryParams.department || job.department.toLowerCase() === queryParams.department.toLowerCase()) &&
+        (!queryParams.location || job.location.toLowerCase() === queryParams.location.toLowerCase()) &&
+        (!queryParams.jobType || job.job_type.toLowerCase() === queryParams.jobType.toLowerCase());
+});
+
+                return (!queryParams.keyword || job.title.toLowerCase().includes(queryParams.keyword.toLowerCase())) &&
+                    (!queryParams.department || job.department.toLowerCase() === queryParams.department.toLowerCase()) &&
+                    (!queryParams.location || job.location.toLowerCase() === queryParams.location.toLowerCase()) &&
+                    (!queryParams.jobType || job.job_type.toLowerCase() === queryParams.jobType.toLowerCase());
+            });
+
+            // Step 3: 打印过滤后的工作数据
+            console.log("Filtered Jobs:", filteredJobs);
+
+            // 显示过滤后的工作结果
+             filteredJobs.forEach(job => {
+                const jobDiv = document.createElement('div');
+                jobDiv.className = 'job-listing';
+                jobDiv.innerHTML = `
+                    <h2>${job.title}</h2>
+                    <p><strong>Department:</strong> ${job.department}</p>
+                    <p><strong>Location:</strong> ${job.location}</p>
+                    <p><strong>Job Type:</strong> ${job.job_type}</p>
+                    <p>${job.description}</p>
+                    <a href="${job.apply_link}" target="_blank">Apply Now</a>
+                `;
+                resultsDiv.appendChild(jobDiv);
+            });
+        }
+
+        fetchJobs();
+    </script>
+</body>
+</html>
+
